@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Search Results for "{{ query }}"</h2>
+
+<div class="alert alert-info">
+    {% if results %}
+        Found {{ results|length }} result{{ 's' if results|length > 1 else '' }}.
+    {% else %}
+        No results found.
+    {% endif %}
+</div>
+<div class="row">
+    {% if results %}
+        {% for item in results %}
+            <div class="col-12 mb-4"> 
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ url_for('view_item', item_id=item.id) }}" class="text-dark text-decoration-none">
+                                {{ item.title }}
+                            </a>
+                        </h5>
+                        <p class="card-text text-muted">
+                            <i>{{ item.desc }}</i> <br>
+                            𖡡 {{ item.address }}
+                        </p>
+                        <a href="{{ url_for('view_item', item_id=item.id) }}" class="btn btn-sm btn-brown view-more">View More</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

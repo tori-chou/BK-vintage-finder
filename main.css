@@ -1,0 +1,119 @@
+:root {
+    --base-color: #f8f8f8; 
+    --accent-color: #8B5E3C; 
+    --light-grey: #64636380;
+    --dark-grey: #333333e9;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+body {
+    background-color: var(--base-color);
+    color: var(--dark-grey);
+}
+
+h1, h2, h3, header {
+    color: var(--dark-grey);
+    font-family: 'DM Serif Display', serif;
+
+}
+
+.text-decoration-none {
+    font-family: 'DM Serif Display';
+    color: var(--light-grey);
+}
+
+.card-text {
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: #6e442a; /* Darker brown */
+}
+
+.view-more, .alert{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: var(--base-color);
+}
+
+.view-more:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--base-color);
+}
+
+#next-steps {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 0.5px solid var(--dark-grey);
+}
+
+.navbar {
+    font-family: 'DM Serif Display';
+    border-bottom: 0.5px solid var(--dark-grey); /* Thin line under navbar */
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds the ellipsis (...) */
+}
+
+.lead {
+    color: var(--dark-grey);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+.btn-outline-accent {
+    color: #8B4513;
+    border-color: #8B4513; 
+}
+
+.btn-outline-accent:hover {
+    background-color: #8B4513; 
+    color: #fff; 
+    border-color: #8B4513; 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #8B4513;
+}
+
+#search-bar {
+    width: 250px; 
+    border-radius: 25px; 
+    padding: 10px;
+}
+
+.navbar-toggler-icon {
+    background-color: #8B4513; 
+}
+
+@media (max-width: 768px) {
+    #search-bar {
+        width: 180px; 
+    }
+}
+
+.square-image {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}

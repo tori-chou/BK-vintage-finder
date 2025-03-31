@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script>
+    let data = {{ data|tojson }}
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://media.gq.com/photos/609ee0fd85bdd1881580eef3/master/pass/shop-talk-raggedy-threads-lead-image.jpg" 
+                alt="Vintage clothing store interior with racks of clothes"
+                class="img-fluid w-100 h-100" 
+                style="object-fit: cover;">
+        </div>
+        <div class="col-md-6 d-flex align-items-center p-4">
+            <div>
+                <h2 class="display-3">Explore Brooklyn Vintage</h2>
+                <p class="lead">
+                    Discover the best curated vintage and second-hand stores in Brooklyn. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-4">
+    <h3>Start exploring</h3>
+    <div class="row" id="popular-items"></div>
+</div>
+{% endblock %}
